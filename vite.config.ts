@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [
       react(),
       federation({
-          name: 'host',
+          name: 'hostApp',
           remotes: {
-              remote: 'http://localhost:6400/assets/remoteEntry.js',
+              remoteApp: 'http://localhost:6400/assets/remoteEntry.js',
           },
-          shared: ['react', 'react-router-dom', 'react-dom'],
+          shared: ['react', 'react-dom'],
       }),
   ],
     build: {
